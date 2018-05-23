@@ -1,3 +1,3 @@
-﻿CREATE TYPE [dbo].[ct_customerid]
+﻿CREATE TYPE [dbo].[ct_Personid]
     FROM INT NOT NULL;
 

@@ -1,22 +1,22 @@
 ﻿CREATE TABLE [dbo].[ActivityReportsPermissions] (
-    [CustomerID]      [dbo].[ct_customerid] NOT NULL,
-    [EndCutomerID]    [dbo].[ct_customerid] NOT NULL,
-    [AgentCustomerID] [dbo].[ct_customerid] NOT NULL,
-    CONSTRAINT [PK_ActivityReportsPermissions_CustomerID_EndCutomerID_InvoiceCustomerID] PRIMARY KEY CLUSTERED ([CustomerID] ASC, [EndCutomerID] ASC, [AgentCustomerID] ASC),
-    CONSTRAINT [FK_ActivityReportsPermissions_AcRpPr_AgentCustomerID] FOREIGN KEY ([AgentCustomerID]) REFERENCES [dbo].[Customers] ([CustomerID]),
-    CONSTRAINT [FK_ActivityReportsPermissions_AcRpPr_CustomerID] FOREIGN KEY ([CustomerID]) REFERENCES [dbo].[Customers] ([CustomerID]),
-    CONSTRAINT [FK_ActivityReportsPermissions_AcRpPr_EndCutomerID] FOREIGN KEY ([EndCutomerID]) REFERENCES [dbo].[Customers] ([CustomerID])
+    [PersonID]      [dbo].[ct_Personid] NOT NULL,
+    [EndCutomerID]    [dbo].[ct_Personid] NOT NULL,
+    [AgentPersonID] [dbo].[ct_Personid] NOT NULL,
+    CONSTRAINT [PK_ActivityReportsPermissions_PersonID_EndCutomerID_InvoicePersonID] PRIMARY KEY CLUSTERED ([PersonID] ASC, [EndCutomerID] ASC, [AgentPersonID] ASC),
+    CONSTRAINT [FK_ActivityReportsPermissions_AcRpPr_AgentPersonID] FOREIGN KEY ([AgentPersonID]) REFERENCES [dbo].[Persons] ([PersonID]),
+    CONSTRAINT [FK_ActivityReportsPermissions_AcRpPr_PersonID] FOREIGN KEY ([PersonID]) REFERENCES [dbo].[Persons] ([PersonID]),
+    CONSTRAINT [FK_ActivityReportsPermissions_AcRpPr_EndCutomerID] FOREIGN KEY ([EndCutomerID]) REFERENCES [dbo].[Persons] ([PersonID])
 );
 
 
 GO
-CREATE NONCLUSTERED INDEX [IFK_ActivityReportsPermissions_AcRpPr_AgentCustomerID]
-    ON [dbo].[ActivityReportsPermissions]([AgentCustomerID] ASC);
+CREATE NONCLUSTERED INDEX [IFK_ActivityReportsPermissions_AcRpPr_AgentPersonID]
+    ON [dbo].[ActivityReportsPermissions]([AgentPersonID] ASC);
 
 
 GO
-CREATE NONCLUSTERED INDEX [IFK_ActivityReportsPermissions_AcRpPr_CustomerID]
-    ON [dbo].[ActivityReportsPermissions]([CustomerID] ASC);
+CREATE NONCLUSTERED INDEX [IFK_ActivityReportsPermissions_AcRpPr_PersonID]
+    ON [dbo].[ActivityReportsPermissions]([PersonID] ASC);
 
 
 GO

@@ -126,19 +126,19 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="Tables\EmailTemplates.sql">
+    <Build Include="Tables\EmailSentTemplates.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="Tables\EmailStatuses.sql">
+    <Build Include="Tables\EmailSentStatuses.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="Tables\CustumerRoles.sql">
+    <Build Include="Tables\PersonRoles.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="Tables\CustomerAccountStatuses.sql">
+    <Build Include="Tables\PersonAccountStatuses.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
@@ -150,15 +150,15 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="Tables\Customers.sql">
+    <Build Include="Tables\Persons.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="Tables\Emails.sql">
+    <Build Include="Tables\EmailsSent.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="Tables\CustomerInvitations.sql">
+    <Build Include="Tables\PersonInvitations.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
@@ -178,7 +178,7 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
-    <Build Include="Tables\ActivitiesCustomersStatus.sql">
+    <Build Include="Tables\ActivitiesPersonStatus.sql">
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
@@ -195,5 +195,13 @@
     <Build Include="User Defined Types\ct_phone.sql" />
     <Build Include="User Defined Types\ct_url.sql" />
     <Build Include="User Defined Types\ct_password.sql" />
+    <Build Include="Tables\Addresses.sql" />
+    <Build Include="Tables\PersonAddress.sql" />
+    <Build Include="Tables\Emails.sql" />
+    <Build Include="Tables\PersonEmails.sql" />
+    <Build Include="Tables\Companies.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DirectMission.refactorlog" />
   </ItemGroup>
 </Project>
