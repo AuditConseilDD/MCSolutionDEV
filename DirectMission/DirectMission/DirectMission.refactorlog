@@ -1,10 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
-  <Operation Name="Rename Refactor" Key="a541e16f-068a-4e7b-af73-059e99cb0e04" ChangeDateTime="05/23/2018 20:15:05">
-    <Property Name="ElementName" Value="[dbo].[Emails]" />
+  <Operation Name="Rename Refactor" Key="2591fa29-0f26-4bcd-ba07-6cc6f2064dc1" ChangeDateTime="05/26/2018 13:25:42">
+    <Property Name="ElementName" Value="[dbo].[Persons].[AccountStatus]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Persons]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[AccountStatusId]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="65cf0ad4-a56f-4a6f-8b8d-c7d436f9a9f8" ChangeDateTime="05/30/2018 18:14:07">
+    <Property Name="ElementName" Value="[dbo].[PersonRoles]" />
     <Property Name="ElementType" Value="SqlTable" />
     <Property Name="ParentElementName" Value="[dbo]" />
     <Property Name="ParentElementType" Value="SqlSchema" />
-    <Property Name="NewName" Value="[EmailsSent]" />
+    <Property Name="NewName" Value="[Roles]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2df901b3-0303-4c3d-bcad-57cac8acac76" ChangeDateTime="05/30/2018 18:23:05">
+    <Property Name="ElementName" Value="[dbo].[Roles].[PersonRoleID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Roles]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[RoleID]" />
   </Operation>
 </Operations>

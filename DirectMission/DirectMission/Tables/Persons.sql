@@ -5,12 +5,11 @@
     [LastName]                 [dbo].[ct_lastname]    NOT NULL,
     [Title]                    [dbo].[ct_title]       NOT NULL,
     [DateOfBirth]              [dbo].[ct_lastname]    NOT NULL,
-    [AccountStatus]            TINYINT                NOT NULL,
+    [AccountStatusId]            TINYINT                NOT NULL,
     [JobTitle]                 [dbo].[ct_jobtitle]    NOT NULL,
     [CreatorPersonID]        [dbo].[ct_Personid]  NULL,
     [BackupPersonID]         [dbo].[ct_Personid]  NULL,
     [BillToPersonID]         [dbo].[ct_Personid]  NULL,
-    [PersonRoleID]           INT                    NOT NULL,
     [PrimaryContactPersonID]   [dbo].[ct_Personid]  NULL,
     [AlternateContactPersonID] [dbo].[ct_Personid]  NULL,
     [AccountOpenedDate]        DATETIME2 (7)          NOT NULL,
@@ -25,12 +24,11 @@
     [ElectronicSignature]      NVARCHAR (100)         NOT NULL,
     [LanguageID]               SMALLINT               NOT NULL,
     CONSTRAINT [PK_Persons_Cust_PersonID] PRIMARY KEY CLUSTERED ([PersonID] ASC),
-    CONSTRAINT [FK_Persons_Cust_AccountStatus] FOREIGN KEY ([AccountStatus]) REFERENCES [dbo].[PersonAccountStatuses] ([PersonAccountStatusID]),
+    CONSTRAINT [FK_Persons_Cust_AccountStatus] FOREIGN KEY ([AccountStatusId]) REFERENCES [dbo].[PersonAccountStatuses] ([PersonAccountStatusID]),
     CONSTRAINT [FK_Persons_Cust_AlternateContactPersonID] FOREIGN KEY ([AlternateContactPersonID]) REFERENCES [dbo].[Persons] ([PersonID]),
     CONSTRAINT [FK_Persons_Cust_BackupPersonID] FOREIGN KEY ([BackupPersonID]) REFERENCES [dbo].[Persons] ([PersonID]),
     CONSTRAINT [FK_Persons_Cust_BillToPersonID] FOREIGN KEY ([BillToPersonID]) REFERENCES [dbo].[Persons] ([PersonID]),
     CONSTRAINT [FK_Persons_Cust_CreatorPersonID] FOREIGN KEY ([CreatorPersonID]) REFERENCES [dbo].[Persons] ([PersonID]),
-    CONSTRAINT [FK_Persons_Cust_PersonRoleID] FOREIGN KEY ([PersonRoleID]) REFERENCES [dbo].[PersonRoles] ([PersonRoleID]),
     CONSTRAINT [FK_Persons_Cust_LanguageID] FOREIGN KEY ([LanguageID]) REFERENCES [dbo].[Languages] ([LanguageID]),
     CONSTRAINT [FK_Persons_Cust_PrimaryContactPersonID] FOREIGN KEY ([PrimaryContactPersonID]) REFERENCES [dbo].[Persons] ([PersonID])
 );
@@ -38,7 +36,7 @@
 
 GO
 CREATE NONCLUSTERED INDEX [IFK_Persons_Cust_AccountStatus]
-    ON [dbo].[Persons]([AccountStatus] ASC);
+    ON [dbo].[Persons]([AccountStatusId] ASC);
 
 
 GO
@@ -62,11 +60,7 @@ CREATE NONCLUSTERED INDEX [IFK_Persons_Cust_CreatorPersonID]
 
 
 GO
-CREATE NONCLUSTERED INDEX [IFK_Persons_Cust_PersonRoleID]
-    ON [dbo].[Persons]([PersonRoleID] ASC);
 
-
-GO
 CREATE NONCLUSTERED INDEX [IFK_Persons_Cust_LanguageID]
     ON [dbo].[Persons]([LanguageID] ASC);
 
