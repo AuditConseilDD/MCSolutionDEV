@@ -172,13 +172,6 @@
     <Build Include="Tables\Emails.sql" />
     <Build Include="Tables\PersonEmails.sql" />
     <Build Include="Tables\Companies.sql" />
-    <Build Include="Tables\Activities.sql" />
-    <Build Include="Tables\ActivitiesPersonStatus.sql" />
-    <Build Include="Tables\ActivityReportRejectionDetails.sql" />
-    <Build Include="Tables\ActivityReports.sql" />
-    <Build Include="Tables\ActivityReportsPermissions.sql" />
-    <Build Include="Tables\ActivityStatuses.sql" />
-    <Build Include="Tables\ActivityTypes.sql" />
     <Build Include="Tables\PersonRoles.sql" />
     <Build Include="Tables\Missions.sql" />
   </ItemGroup>
